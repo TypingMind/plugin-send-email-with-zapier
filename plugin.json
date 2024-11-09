@@ -1,0 +1,56 @@
+{
+  "id": "send_email_with_zapier",
+  "uuid": "e8e2d36f-a95e-4be1-9f21-3ffe036af22c",
+  "emoji": "📧",
+  "title": "Send email with Zapier",
+  "system": false,
+  "disabled": false,
+  "syncedAt": null,
+  "httpAction": {
+    "id": "ee7f1af6-b4ca-4b88-9568-8791ada4144f",
+    "url": "{webhookURL}",
+    "name": "",
+    "method": "POST",
+    "hasBody": true,
+    "requestBody": "{\n  \"email\": \"{email}\",\n  \"subject\": \"{subject}\",\n  \"content\": \"{content}\"\n}\n",
+    "resultTransform": {
+      "engine": "jmes",
+      "expression": ""
+    },
+    "hasResultTransform": false
+  },
+  "openaiSpec": {
+    "name": "send_email_with_zapier",
+    "parameters": {
+      "type": "object",
+      "required": ["email", "subject", "content"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Email address."
+        },
+        "content": {
+          "type": "string",
+          "description": "Email content."
+        },
+        "subject": {
+          "type": "string",
+          "description": "Email subject."
+        }
+      }
+    },
+    "description": "Send email to my email."
+  },
+  "outputType": "respond_to_ai",
+  "oauthConfig": null,
+  "userSettings": [
+    {
+      "name": "webhookURL",
+      "label": "Webhook URL"
+    }
+  ],
+  "isServerPlugin": true,
+  "overviewMarkdown": "## Send email via Zapier 📧\n\nEasily connect TypingMind with Zapier using a [Zapier webhook](https://zapier.com/apps/webhook/integrations) to automate tasks like sending emails, updating documents, scheduling posts, and more. \n\nThis plugin allows you to create a seamless flow of information between TypingMind and your preferred apps on Zapier. Ideal for streamlining routine actions and enhancing productivity with minimal setup.\n\n\n\n",
+  "authenticationType": "AUTH_TYPE_NONE",
+  "implementationType": "http"
+}
