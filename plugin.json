@@ -39,7 +39,7 @@
         }
       }
     },
-    "description": "Send email to my email."
+    "description": "Send an email to a specified address using Zapier."
   },
   "outputType": "respond_to_ai",
   "oauthConfig": null,
