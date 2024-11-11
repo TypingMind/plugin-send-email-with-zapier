@@ -2,6 +2,7 @@
   "id": "send_email_with_zapier",
   "uuid": "e8e2d36f-a95e-4be1-9f21-3ffe036af22c",
   "emoji": "📧",
+  "iconURL": "https://raw.githubusercontent.com/TypingMind/plugin-send-email-with-zapier/main/zapier.svg",
   "title": "Send email with Zapier",
   "system": false,
   "disabled": false,
@@ -27,30 +28,33 @@
       "properties": {
         "email": {
           "type": "string",
-          "description": "Email address."
+          "description": "The recipient's email address."
         },
         "content": {
           "type": "string",
-          "description": "Email content."
+          "description": "The body content of the email."
         },
         "subject": {
           "type": "string",
-          "description": "Email subject."
+          "description": "The subject line of the email."
         }
       }
     },
-    "description": "Send an email to a specified address using Zapier."
+    "description": "Send an email to a specific email address with title and text content using Zapier webhook"
   },
   "outputType": "respond_to_ai",
   "oauthConfig": null,
   "userSettings": [
     {
       "name": "webhookURL",
-      "label": "Webhook URL"
+      "label": "Webhook URL (Required)",
+      "description": "The Zapier webhook URL to which the email data will be sent",
+      "type": "password",
+      "required": true,
+      "placeholder": "https://hooks.zapier.com/hooks/catch/******"
     }
   ],
   "isServerPlugin": true,
-  "overviewMarkdown": "## Send email via Zapier 📧\n\nEasily connect TypingMind with Zapier using a [Zapier webhook](https://zapier.com/apps/webhook/integrations) to automate tasks like sending emails, updating documents, scheduling posts, and more. \n\nThis plugin allows you to create a seamless flow of information between TypingMind and your preferred apps on Zapier. Ideal for streamlining routine actions and enhancing productivity with minimal setup.\n\n\n\n",
   "authenticationType": "AUTH_TYPE_NONE",
   "implementationType": "http"
 }
